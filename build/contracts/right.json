@@ -1,0 +1,682 @@
+{
+  "contractName": "right",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/MIQI/Desktop/realSupplyRemixed/contracts/right.sol\":\"right\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/MIQI/Desktop/realSupplyRemixed/contracts/right.sol\":{\"keccak256\":\"0xeec650be05e6248131476e27167cfe512440177e554ec00b15ccee1b5bab7cd5\",\"urls\":[\"bzzr://43e1f01f6e78ac8a9c5b12c217547689d7eddf8d9406ee172a95925328efc678\"]}},\"version\":1}",
+  "bytecode": "0x60806040526040518061014001604052807377bda9fa7e6a74eedfc76e1d1ee2e47b0135684073ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001730aee156f132a913ab6aba6efd23146c13787f24973ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200173d7f6be6fb84592c7e6421cf504752b1a55a22fdc73ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020017353479e1bdf0b892e041eadb81f041fa6b20490b773ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020017341f410e5475a877f05d405f6be96755b09c3ed6373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001736a04c0ab60994989795159374b3aa6f878f2b57f73ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200173bae2e2cd214ea0cc404a82e48e3f7006d5ec2c5b73ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001733a16eb1c62548b76505fa1bf90dc3b25fb866f1a73ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001733348e65cdecb1b3033668160ff5416a21ee0993373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001735ef977f1b098cca2706040b9c188608fa68434d473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815250600190600a6102da9291906102ed565b503480156102e757600080fd5b506103ad565b82600a8101928215610359579160200282015b828111156103585782518260006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555091602001919060010190610300565b5b509050610366919061036a565b5090565b6103aa91905b808211156103a657600081816101000a81549073ffffffffffffffffffffffffffffffffffffffff021916905550600101610370565b5090565b90565b60c6806103bb6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c80638da5cb5b14602d575b600080fd5b60336075565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff168156fea165627a7a72305820538dbb85874575e45a17d39602f830c306a7156a971c3473e845b2b4f4b523960029",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c80638da5cb5b14602d575b600080fd5b60336075565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff168156fea165627a7a72305820538dbb85874575e45a17d39602f830c306a7156a971c3473e845b2b4f4b523960029",
+  "sourceMap": "27:574:2:-;;;82:515;;;;;;;;112:42;82:515;;;;;;;;161:42;82:515;;;;;;;;210:42;82:515;;;;;;;;259:42;82:515;;;;;;;;308:42;82:515;;;;;;;;357:42;82:515;;;;;;;;406:42;82:515;;;;;;;;455:42;82:515;;;;;;;;504:42;82:515;;;;;;;;553:42;82:515;;;;;;;;;;;;;;;:::i;:::-;;27:574;8:9:-1;5:2;;;30:1;27;20:12;5:2;27:574:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;",
+  "deployedSourceMap": "27:574:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;27:574:2;;;;;;;;;;;;;;;;;;;51:20;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.5.0;\r\n\r\ncontract right {\r\n\r\n    address public owner;\r\n\r\n\r\n    address[10] accounts =\r\n    [ 0x77bDa9fA7e6a74eeDfc76E1D1ee2E47B01356840,\r\n    0x0Aee156F132a913AB6aBA6Efd23146c13787f249,\r\n    0xD7f6bE6fb84592c7E6421cf504752B1A55a22FDc,\r\n    0x53479e1BDF0B892E041eAdb81F041fA6b20490B7,\r\n    0x41F410E5475A877f05d405f6be96755b09C3eD63,\r\n    0x6A04C0ab60994989795159374B3Aa6F878f2b57F,\r\n    0xBAE2E2cd214ea0cC404A82E48e3f7006d5ec2C5B,\r\n    0x3a16Eb1C62548b76505fA1bf90DC3B25FB866f1A,\r\n    0x3348e65CDECb1b3033668160fF5416a21Ee09933,\r\n    0x5EF977f1B098cca2706040B9c188608FA68434d4 ];\r\n}",
+  "sourcePath": "C:\\Users\\MIQI\\Desktop\\realSupplyRemixed\\contracts\\right.sol",
+  "ast": {
+    "absolutePath": "/C/Users/MIQI/Desktop/realSupplyRemixed/contracts/right.sol",
+    "exportedSymbols": {
+      "right": [
+        379
+      ]
+    },
+    "id": 380,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 361,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 379,
+        "linearizedBaseContracts": [
+          379
+        ],
+        "name": "right",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 363,
+            "name": "owner",
+            "nodeType": "VariableDeclaration",
+            "scope": 379,
+            "src": "51:20:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 362,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "51:7:2",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 378,
+            "name": "accounts",
+            "nodeType": "VariableDeclaration",
+            "scope": 379,
+            "src": "82:515:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_address_$10_storage",
+              "typeString": "address[10]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 364,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "82:7:2",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "id": 366,
+              "length": {
+                "argumentTypes": null,
+                "hexValue": "3130",
+                "id": 365,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "kind": "number",
+                "lValueRequested": false,
+                "nodeType": "Literal",
+                "src": "90:2:2",
+                "subdenomination": null,
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_10_by_1",
+                  "typeString": "int_const 10"
+                },
+                "value": "10"
+              },
+              "nodeType": "ArrayTypeName",
+              "src": "82:11:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_address_$10_storage_ptr",
+                "typeString": "address[10]"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "components": [
+                {
+                  "argumentTypes": null,
+                  "hexValue": "307837376244613966413765366137346565446663373645314431656532453437423031333536383430",
+                  "id": 367,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "112:42:2",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "value": "0x77bDa9fA7e6a74eeDfc76E1D1ee2E47B01356840"
+                },
+                {
+                  "argumentTypes": null,
+                  "hexValue": "307830416565313536463133326139313341423661424136456664323331343663313337383766323439",
+                  "id": 368,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "161:42:2",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "value": "0x0Aee156F132a913AB6aBA6Efd23146c13787f249"
+                },
+                {
+                  "argumentTypes": null,
+                  "hexValue": "307844376636624536666238343539326337453634323163663530343735324231413535613232464463",
+                  "id": 369,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "210:42:2",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "value": "0xD7f6bE6fb84592c7E6421cf504752B1A55a22FDc"
+                },
+                {
+                  "argumentTypes": null,
+                  "hexValue": "307835333437396531424446304238393245303431654164623831463034316641366232303439304237",
+                  "id": 370,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "259:42:2",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "value": "0x53479e1BDF0B892E041eAdb81F041fA6b20490B7"
+                },
+                {
+                  "argumentTypes": null,
+                  "hexValue": "307834314634313045353437354138373766303564343035663662653936373535623039433365443633",
+                  "id": 371,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "308:42:2",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "value": "0x41F410E5475A877f05d405f6be96755b09C3eD63"
+                },
+                {
+                  "argumentTypes": null,
+                  "hexValue": "307836413034433061623630393934393839373935313539333734423341613646383738663262353746",
+                  "id": 372,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "357:42:2",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "value": "0x6A04C0ab60994989795159374B3Aa6F878f2b57F"
+                },
+                {
+                  "argumentTypes": null,
+                  "hexValue": "307842414532453263643231346561306343343034413832453438653366373030366435656332433542",
+                  "id": 373,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "406:42:2",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "value": "0xBAE2E2cd214ea0cC404A82E48e3f7006d5ec2C5B"
+                },
+                {
+                  "argumentTypes": null,
+                  "hexValue": "307833613136456231433632353438623736353035664131626639304443334232354642383636663141",
+                  "id": 374,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "455:42:2",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "value": "0x3a16Eb1C62548b76505fA1bf90DC3B25FB866f1A"
+                },
+                {
+                  "argumentTypes": null,
+                  "hexValue": "307833333438653635434445436231623330333336363831363066463534313661323145653039393333",
+                  "id": 375,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "504:42:2",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "value": "0x3348e65CDECb1b3033668160fF5416a21Ee09933"
+                },
+                {
+                  "argumentTypes": null,
+                  "hexValue": "307835454639373766314230393863636132373036303430423963313838363038464136383433346434",
+                  "id": 376,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "553:42:2",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "value": "0x5EF977f1B098cca2706040B9c188608FA68434d4"
+                }
+              ],
+              "id": 377,
+              "isConstant": false,
+              "isInlineArray": true,
+              "isLValue": false,
+              "isPure": true,
+              "lValueRequested": false,
+              "nodeType": "TupleExpression",
+              "src": "110:487:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_address_payable_$10_memory_ptr",
+                "typeString": "address payable[10] memory"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "scope": 380,
+        "src": "27:574:2"
+      }
+    ],
+    "src": "0:601:2"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/MIQI/Desktop/realSupplyRemixed/contracts/right.sol",
+    "exportedSymbols": {
+      "right": [
+        379
+      ]
+    },
+    "id": 380,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 361,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 379,
+        "linearizedBaseContracts": [
+          379
+        ],
+        "name": "right",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 363,
+            "name": "owner",
+            "nodeType": "VariableDeclaration",
+            "scope": 379,
+            "src": "51:20:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 362,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "51:7:2",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 378,
+            "name": "accounts",
+            "nodeType": "VariableDeclaration",
+            "scope": 379,
+            "src": "82:515:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_address_$10_storage",
+              "typeString": "address[10]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 364,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "82:7:2",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "id": 366,
+              "length": {
+                "argumentTypes": null,
+                "hexValue": "3130",
+                "id": 365,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "kind": "number",
+                "lValueRequested": false,
+                "nodeType": "Literal",
+                "src": "90:2:2",
+                "subdenomination": null,
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_10_by_1",
+                  "typeString": "int_const 10"
+                },
+                "value": "10"
+              },
+              "nodeType": "ArrayTypeName",
+              "src": "82:11:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_address_$10_storage_ptr",
+                "typeString": "address[10]"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "components": [
+                {
+                  "argumentTypes": null,
+                  "hexValue": "307837376244613966413765366137346565446663373645314431656532453437423031333536383430",
+                  "id": 367,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "112:42:2",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "value": "0x77bDa9fA7e6a74eeDfc76E1D1ee2E47B01356840"
+                },
+                {
+                  "argumentTypes": null,
+                  "hexValue": "307830416565313536463133326139313341423661424136456664323331343663313337383766323439",
+                  "id": 368,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "161:42:2",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "value": "0x0Aee156F132a913AB6aBA6Efd23146c13787f249"
+                },
+                {
+                  "argumentTypes": null,
+                  "hexValue": "307844376636624536666238343539326337453634323163663530343735324231413535613232464463",
+                  "id": 369,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "210:42:2",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "value": "0xD7f6bE6fb84592c7E6421cf504752B1A55a22FDc"
+                },
+                {
+                  "argumentTypes": null,
+                  "hexValue": "307835333437396531424446304238393245303431654164623831463034316641366232303439304237",
+                  "id": 370,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "259:42:2",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "value": "0x53479e1BDF0B892E041eAdb81F041fA6b20490B7"
+                },
+                {
+                  "argumentTypes": null,
+                  "hexValue": "307834314634313045353437354138373766303564343035663662653936373535623039433365443633",
+                  "id": 371,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "308:42:2",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "value": "0x41F410E5475A877f05d405f6be96755b09C3eD63"
+                },
+                {
+                  "argumentTypes": null,
+                  "hexValue": "307836413034433061623630393934393839373935313539333734423341613646383738663262353746",
+                  "id": 372,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "357:42:2",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "value": "0x6A04C0ab60994989795159374B3Aa6F878f2b57F"
+                },
+                {
+                  "argumentTypes": null,
+                  "hexValue": "307842414532453263643231346561306343343034413832453438653366373030366435656332433542",
+                  "id": 373,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "406:42:2",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "value": "0xBAE2E2cd214ea0cC404A82E48e3f7006d5ec2C5B"
+                },
+                {
+                  "argumentTypes": null,
+                  "hexValue": "307833613136456231433632353438623736353035664131626639304443334232354642383636663141",
+                  "id": 374,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "455:42:2",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "value": "0x3a16Eb1C62548b76505fA1bf90DC3B25FB866f1A"
+                },
+                {
+                  "argumentTypes": null,
+                  "hexValue": "307833333438653635434445436231623330333336363831363066463534313661323145653039393333",
+                  "id": 375,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "504:42:2",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "value": "0x3348e65CDECb1b3033668160fF5416a21Ee09933"
+                },
+                {
+                  "argumentTypes": null,
+                  "hexValue": "307835454639373766314230393863636132373036303430423963313838363038464136383433346434",
+                  "id": 376,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "553:42:2",
+                  "subdenomination": null,
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address_payable",
+                    "typeString": "address payable"
+                  },
+                  "value": "0x5EF977f1B098cca2706040B9c188608FA68434d4"
+                }
+              ],
+              "id": 377,
+              "isConstant": false,
+              "isInlineArray": true,
+              "isLValue": false,
+              "isPure": true,
+              "lValueRequested": false,
+              "nodeType": "TupleExpression",
+              "src": "110:487:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_address_payable_$10_memory_ptr",
+                "typeString": "address payable[10] memory"
+              }
+            },
+            "visibility": "internal"
+          }
+        ],
+        "scope": 380,
+        "src": "27:574:2"
+      }
+    ],
+    "src": "0:601:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x19792732c257d538AAAd0f32450e921dAf909aef",
+      "transactionHash": "0xdfae8ecbc5f7b3181da120c58bd092209403fd0c324808fb80e9db9ff8fbb87a"
+    }
+  },
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-07-23T16:38:10.794Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
